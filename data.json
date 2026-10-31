@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-31T12:23:26.657Z",
+  "updatedAt": "2026-10-31T21:31:48.647Z",
   "data": {
     "CHN": {
       "rate": {
@@ -7856,32 +7856,6 @@
         "value": 4.6
       }
     ],
-    "CHN-gdp": [
-      {
-        "period": "2020",
-        "value": 2.34
-      },
-      {
-        "period": "2021",
-        "value": 8.57
-      },
-      {
-        "period": "2022",
-        "value": 3.13
-      },
-      {
-        "period": "2023",
-        "value": 5.42
-      },
-      {
-        "period": "2024",
-        "value": 4.96
-      },
-      {
-        "period": "2025",
-        "value": 4.96
-      }
-    ],
     "USA-reservesGdp": [
       {
         "period": "2023-10",
@@ -8286,6 +8260,7 @@
   },
   "errors": [
     "BIP-Quartale CHN: keine geprüfte aktuelle Quartalsreihe gefunden; Wert bleibt leer",
-    "Inflation-Chart JPN: keine YoY-Punkte"
+    "Inflation-Chart JPN: keine YoY-Punkte",
+    "BIP-Chart WorldBank: The operation was aborted due to timeout"
   ]
 }
