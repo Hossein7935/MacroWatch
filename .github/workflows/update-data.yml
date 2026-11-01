@@ -32,6 +32,8 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - name: Restore index.html if broken + hover tooltips
+        run: node scripts/restore-index.mjs
       - name: Check updater syntax
         run: |
           node --check scripts/update-data.mjs
@@ -46,6 +48,7 @@ jobs:
           node --check scripts/fetch-reserves-gdp.mjs
           node --check scripts/fetch-deficit.mjs
           node --check scripts/fetch-sofr-term.mjs
+          node --check scripts/restore-index.mjs
       - name: Fetch official economic data
         env:
           TRADING_ECONOMICS_API_KEY: ${{ secrets.TRADING_ECONOMICS_API_KEY }}
@@ -76,7 +79,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data.json scripts/
+          git add data.json scripts/ index.html
           if git diff --cached --quiet; then
             echo "No data changes to commit"
           else
