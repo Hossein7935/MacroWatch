@@ -45,6 +45,7 @@ jobs:
           node --check scripts/fetch-gdp-charts.mjs
           node --check scripts/fetch-reserves-gdp.mjs
           node --check scripts/fetch-deficit.mjs
+          node --check scripts/fetch-sofr-term.mjs
       - name: Fetch official economic data
         env:
           TRADING_ECONOMICS_API_KEY: ${{ secrets.TRADING_ECONOMICS_API_KEY }}
@@ -59,6 +60,8 @@ jobs:
         run: node scripts/fetch-tips.mjs
       - name: Build 6-month yield charts (2Y/10Y)
         run: node scripts/fetch-yield-charts.mjs
+      - name: CME Term SOFR 3M + T10Y2Y (free)
+        run: node scripts/fetch-sofr-term.mjs
       - name: Build 3-year policy rate charts
         run: node scripts/fetch-rate-charts.mjs
       - name: Build inflation charts (3y)
