@@ -77,8 +77,8 @@ try {
 }
 
 try {
-  if (!(histories['USA-t10y2y'] || []).length || (histories['USA-t10y2y'] || []).length < 100) {
-    const start = '2019-01-01';
+  if (true) {
+    const start = '2015-01-01';
     const url = `https://fred.stlouisfed.org/graph/fredgraph.csv?id=T10Y2Y&cosd=${start}`;
     const r = await fetch(url, {
       headers: { 'User-Agent': 'MacroWatch/1.0' },
@@ -94,15 +94,15 @@ try {
         rows.push({ period: date.slice(0, 10), value: Math.round(Number(val) * 1000) / 1000 });
       }
     }
-    const step = Math.max(1, Math.floor(rows.length / 260));
+    const step = Math.max(1, Math.floor(rows.length / 520));
     const sampled = [];
     for (let i = 0; i < rows.length; i += step) sampled.push(rows[i]);
     if (sampled.at(-1)?.period !== rows.at(-1)?.period) sampled.push(rows.at(-1));
-    histories['USA-t10y2y'] = sampled.slice(-260);
+    histories['USA-t10y2y'] = sampled.slice(-520);
     const last = histories['USA-t10y2y'].at(-1);
     if (last) {
       data.USA = data.USA || {};
-      data.USA.t10y2y = { value: last.value, date: last.period, source: 'FRED · T10Y2Y' };
+      data.USA.t10y2y = { value: last.value, date: last.period, source: 'FRED · T10Y2Y · 10 Jahre' };
     }
     console.log('T10Y2Y:', histories['USA-t10y2y'].length, 'Punkte');
   }
