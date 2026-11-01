@@ -36,8 +36,8 @@ jobs:
         run: node scripts/restore-index.mjs
       - name: Check updater syntax
         run: |
-          node --check scripts/update-data.mjs
           node --check scripts/fetch-sofr-term.mjs
+          node --check scripts/fetch-nonfin-debt.mjs
           node --check scripts/restore-index.mjs
       - name: Fetch official economic data
         env:
@@ -55,6 +55,8 @@ jobs:
         run: node scripts/fetch-yield-charts.mjs
       - name: CME Term SOFR 3M + T10Y2Y (free)
         run: node scripts/fetch-sofr-term.mjs
+      - name: Nonfinancial debt growth (Fed Z.1)
+        run: node scripts/fetch-nonfin-debt.mjs
       - name: Build 3-year policy rate charts
         run: node scripts/fetch-rate-charts.mjs
       - name: Build inflation charts (3y)
@@ -75,7 +77,6 @@ jobs:
           else
             git commit -m "Update MacroWatch data" || true
             git pull --no-rebase origin main || true
-            # Prefer our index.html on conflict
             if [ -f index.html ]; then git checkout --ours index.html 2>/dev/null || true; git add index.html || true; fi
             git commit -m "Resolve merge" || true
             git push origin HEAD:main || git push --force-with-lease origin HEAD:main

@@ -28,10 +28,19 @@ if (!html.includes('bindBigChartHover')) {
     const fn = `\nfunction bindBigChartHover(body){\n  const svg=body.querySelector('svg.chart-hover')||body.querySelector('svg');\n  const tip=body.querySelector('#chartDlgTip');\n  if(!svg||!tip)return;\n  const ns='http://www.w3.org/2000/svg';\n  let v=svg.querySelector('.chart-crosshair-v'),h=svg.querySelector('.chart-crosshair-h'),d=svg.querySelector('.chart-crosshair-dot');\n  if(!v){v=document.createElementNS(ns,'line');v.setAttribute('class','chart-crosshair-v');h=document.createElementNS(ns,'line');h.setAttribute('class','chart-crosshair-h');d=document.createElementNS(ns,'circle');d.setAttribute('class','chart-crosshair-dot');d.setAttribute('r','5');svg.appendChild(v);svg.appendChild(h);svg.appendChild(d);}\n  const hits=[...svg.querySelectorAll('.hit')];\n  const vb=svg.viewBox.baseVal;\n  svg.onmousemove=(e)=>{\n    if(!hits.length)return;\n    const rect=svg.getBoundingClientRect();\n    const mx=(e.clientX-rect.left)*(vb.width/(rect.width||1));\n    let best=hits[0],bd=1e9;\n    for(const x of hits){const dd=Math.abs(+x.getAttribute('cx')-mx);if(dd<bd){bd=dd;best=x;}}\n    const cx=+best.getAttribute('cx'),cy=+best.getAttribute('cy');\n    v.setAttribute('x1',cx);v.setAttribute('x2',cx);v.setAttribute('y1',0);v.setAttribute('y2',vb.height);\n    h.setAttribute('y1',cy);h.setAttribute('y2',cy);h.setAttribute('x1',0);h.setAttribute('x2',vb.width);\n    d.setAttribute('cx',cx);d.setAttribute('cy',cy);\n    tip.innerHTML='<b>'+best.dataset.period+'</b><br>'+best.dataset.value;tip.classList.add('show');\n    const br=body.getBoundingClientRect();\n    let left=e.clientX-br.left+14,top=e.clientY-br.top-10;\n    if(left+140>br.width)left=e.clientX-br.left-150;if(top<0)top=8;\n    tip.style.left=left+'px';tip.style.top=top+'px';\n  };\n  svg.onmouseleave=()=>{tip.classList.remove('show');v.setAttribute('x1',-9);v.setAttribute('x2',-9);h.setAttribute('y1',-9);h.setAttribute('y2',-9);d.setAttribute('cx',-9);d.setAttribute('cy',-9);};\n}\n`;
     html = html.replace('function historyHTML', fn + 'function historyHTML');
     console.log('TV crosshair patch applied');
-  } else {
-    console.log('needle not found for paintChartDlg');
-  }
+  } else console.log('needle not found');
+}
+
+if (!html.includes('nonfinDebt')) {
+  html = html.replace("||key==='sofr3m'||key==='t10y2y'", "||key==='sofr3m'||key==='t10y2y'||key==='nonfinDebt'");
+  html = html.replace("extraLabels={sofr3m:'CME Term SOFR 3M',t10y2y:'10Y − 2Y Spread'}", "extraLabels={sofr3m:'CME Term SOFR 3M',t10y2y:'10Y − 2Y Spread',nonfinDebt:'Nonfinancial Debt Growth'}");
+  const marker = "historyHTML('USA','t10y2y')}</div>`;";
+  const insert = "historyHTML('USA','t10y2y')}</div><div class=\"metric has-chart\"><div class=\"name\">Nonfinancial Debt Growth</div><div class=\"value\">${(()=>{const a=histories['USA-nonfinDebt']||[];const last=a.at(-1);return last?fmt(last.value):'—' })()}</div><div class=\"date\">Fed Z.1 · YoY · <a href=\"https://www.federalreserve.gov/releases/z1/dataviz/z1/nonfinancial_debt/chart/#units:growth\" target=\"_blank\" rel=\"noopener\" style=\"color:var(--accent)\">Fed ↗</a></div>${historyHTML('USA','nonfinDebt')}</div>`;";
+  if (html.includes(marker)) {
+    html = html.replace(marker, insert);
+    console.log('nonfinDebt metric added');
+  } else console.log('face B marker not found');
 }
 
 fs.writeFileSync('index.html', html);
-console.log('done', html.length, 'TV', html.includes('bindBigChartHover'));
+console.log('done', html.length, 'TV', html.includes('bindBigChartHover'), 'debt', html.includes('nonfinDebt'));
