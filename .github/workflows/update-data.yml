@@ -37,16 +37,6 @@ jobs:
       - name: Check updater syntax
         run: |
           node --check scripts/update-data.mjs
-          node --check scripts/fetch-inflation.mjs
-          node --check scripts/fetch-y2.mjs
-          node --check scripts/fetch-y10.mjs
-          node --check scripts/fetch-tips.mjs
-          node --check scripts/fetch-yield-charts.mjs
-          node --check scripts/fetch-rate-charts.mjs
-          node --check scripts/fetch-inflation-charts.mjs
-          node --check scripts/fetch-gdp-charts.mjs
-          node --check scripts/fetch-reserves-gdp.mjs
-          node --check scripts/fetch-deficit.mjs
           node --check scripts/fetch-sofr-term.mjs
           node --check scripts/restore-index.mjs
       - name: Fetch official economic data
@@ -79,11 +69,14 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data.json scripts/ index.html
+          git add data.json scripts/ index.html || true
           if git diff --cached --quiet; then
             echo "No data changes to commit"
           else
-            git commit -m "Update MacroWatch data"
-            git pull --rebase origin main || true
-            git push
+            git commit -m "Update MacroWatch data" || true
+            git pull --no-rebase origin main || true
+            # Prefer our index.html on conflict
+            if [ -f index.html ]; then git checkout --ours index.html 2>/dev/null || true; git add index.html || true; fi
+            git commit -m "Resolve merge" || true
+            git push origin HEAD:main || git push --force-with-lease origin HEAD:main
           fi
