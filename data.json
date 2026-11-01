@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-31T21:31:48.647Z",
+  "updatedAt": "2026-11-01T05:59:12.562Z",
   "data": {
     "CHN": {
       "rate": {
@@ -19,12 +19,12 @@
       },
       "y2": {
         "value": 1.245,
-        "date": "2026-10-31",
+        "date": "2026-11-01",
         "source": "TradingView · TVC:CN02Y (China 2 Year Government Bonds Yield)"
       },
       "y10": {
         "value": 1.632,
-        "date": "2026-10-31",
+        "date": "2026-11-01",
         "source": "TradingView · TVC:CN10Y (China 10 Year Government Bonds Yield)"
       },
       "deficit": {
@@ -46,12 +46,12 @@
       },
       "y2": {
         "value": 4.594,
-        "date": "2026-10-31",
+        "date": "2026-11-01",
         "source": "TradingView · TVC:US02Y (United States 2 Year Government Bonds Yield)"
       },
       "y10": {
         "value": 4.933,
-        "date": "2026-10-31",
+        "date": "2026-11-01",
         "source": "TradingView · TVC:US10Y (United States 10 Year Government Bonds Yield)"
       },
       "inflation": {
@@ -93,7 +93,7 @@
       },
       "y10": {
         "value": 2.758,
-        "date": "2026-10-31",
+        "date": "2026-11-01",
         "source": "TradingView · TVC:JP10Y (Japan 10 Year LSEG Government Bonds Yield)"
       },
       "inflation": {
@@ -103,7 +103,7 @@
       },
       "y2": {
         "value": 1.876,
-        "date": "2026-10-31",
+        "date": "2026-11-01",
         "source": "TradingView · TVC:JP02Y (Japan 2 Year LSEG Government Bonds Yield)"
       },
       "deficit": {
@@ -125,7 +125,7 @@
       },
       "y10": {
         "value": 4.9759,
-        "date": "2026-10-31",
+        "date": "2026-11-01",
         "source": "TradingView · TVC:FR10Y (France 10 Year Government Bonds Yield)"
       },
       "inflation": {
@@ -135,7 +135,7 @@
       },
       "y2": {
         "value": 3.6641,
-        "date": "2026-10-31",
+        "date": "2026-11-01",
         "source": "TradingView · TVC:FR02Y (France 2 Year Government Bonds Yield)"
       },
       "deficit": {
@@ -157,7 +157,7 @@
       },
       "y10": {
         "value": 3.3241,
-        "date": "2026-10-31",
+        "date": "2026-11-01",
         "source": "TradingView · TVC:DE10Y (Germany 10 Year Government Bonds Yield)"
       },
       "inflation": {
@@ -167,7 +167,7 @@
       },
       "y2": {
         "value": 3.0128,
-        "date": "2026-10-31",
+        "date": "2026-11-01",
         "source": "TradingView · TVC:DE02Y (Germany 2 Year Government Bonds Yield)"
       },
       "deficit": {
@@ -189,7 +189,7 @@
       },
       "y10": {
         "value": 5.137,
-        "date": "2026-10-31",
+        "date": "2026-11-01",
         "source": "TradingView · TVC:AU10Y (Australia 10 Year Government Bonds Yield)"
       },
       "inflation": {
@@ -199,7 +199,7 @@
       },
       "y2": {
         "value": 4.932,
-        "date": "2026-10-31",
+        "date": "2026-11-01",
         "source": "TradingView · TVC:AU02Y (Australia 2 Year Government Bonds Yield)"
       },
       "deficit": {
@@ -1858,7 +1858,7 @@
         "value": 4.61
       },
       {
-        "period": "2026-10-31",
+        "period": "2026-11-01",
         "value": 4.594
       }
     ],
@@ -2500,7 +2500,7 @@
         "value": 4.98
       },
       {
-        "period": "2026-10-31",
+        "period": "2026-11-01",
         "value": 4.933
       }
     ],
@@ -3142,7 +3142,7 @@
         "value": 3.008
       },
       {
-        "period": "2026-10-31",
+        "period": "2026-11-01",
         "value": 3.013
       }
     ],
@@ -3784,7 +3784,7 @@
         "value": 3.008
       },
       {
-        "period": "2026-10-31",
+        "period": "2026-11-01",
         "value": 3.664
       }
     ],
@@ -4426,7 +4426,7 @@
         "value": 1.952
       },
       {
-        "period": "2026-10-31",
+        "period": "2026-11-01",
         "value": 1.876
       }
     ],
@@ -5068,7 +5068,7 @@
         "value": 3.057
       },
       {
-        "period": "2026-10-31",
+        "period": "2026-11-01",
         "value": 2.758
       }
     ],
@@ -5710,7 +5710,7 @@
         "value": 1.243
       },
       {
-        "period": "2026-10-31",
+        "period": "2026-11-01",
         "value": 1.245
       }
     ],
@@ -6352,7 +6352,7 @@
         "value": 1.64
       },
       {
-        "period": "2026-10-31",
+        "period": "2026-11-01",
         "value": 1.632
       }
     ],
@@ -6502,7 +6502,7 @@
         "value": 3.47
       },
       {
-        "period": "2026-10-31",
+        "period": "2026-11-01",
         "value": 3.324
       }
     ],
@@ -6652,7 +6652,7 @@
         "value": 4.477
       },
       {
-        "period": "2026-10-31",
+        "period": "2026-11-01",
         "value": 4.976
       }
     ],
@@ -6802,7 +6802,7 @@
         "value": 5.283
       },
       {
-        "period": "2026-10-31",
+        "period": "2026-11-01",
         "value": 5.137
       }
     ],
@@ -6952,7 +6952,7 @@
         "value": 4.922
       },
       {
-        "period": "2026-10-31",
+        "period": "2026-11-01",
         "value": 4.932
       }
     ],
@@ -7856,6 +7856,32 @@
         "value": 4.6
       }
     ],
+    "CHN-gdp": [
+      {
+        "period": "2020",
+        "value": 2.34
+      },
+      {
+        "period": "2021",
+        "value": 8.57
+      },
+      {
+        "period": "2022",
+        "value": 3.13
+      },
+      {
+        "period": "2023",
+        "value": 5.42
+      },
+      {
+        "period": "2024",
+        "value": 4.96
+      },
+      {
+        "period": "2025",
+        "value": 4.96
+      }
+    ],
     "USA-reservesGdp": [
       {
         "period": "2023-10",
@@ -8260,7 +8286,6 @@
   },
   "errors": [
     "BIP-Quartale CHN: keine geprüfte aktuelle Quartalsreihe gefunden; Wert bleibt leer",
-    "Inflation-Chart JPN: keine YoY-Punkte",
-    "BIP-Chart WorldBank: The operation was aborted due to timeout"
+    "Inflation-Chart JPN: keine YoY-Punkte"
   ]
 }
