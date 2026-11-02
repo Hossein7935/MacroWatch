@@ -31,16 +31,48 @@ if (!html.includes('bindBigChartHover')) {
   } else console.log('needle not found');
 }
 
-if (!html.includes('nonfinDebt')) {
-  html = html.replace("||key==='sofr3m'||key==='t10y2y'", "||key==='sofr3m'||key==='t10y2y'||key==='nonfinDebt'");
-  html = html.replace("extraLabels={sofr3m:'CME Term SOFR 3M',t10y2y:'10Y − 2Y Spread'}", "extraLabels={sofr3m:'CME Term SOFR 3M',t10y2y:'10Y − 2Y Spread',nonfinDebt:'Nonfinancial Debt Growth'}");
+// Chart keys: hhDebt + bizDebt (not total nonfinDebt)
+if (!html.includes("'hhDebt'") && !html.includes('hhDebt')) {
+  html = html.replace(
+    "||key==='sofr3m'||key==='t10y2y'",
+    "||key==='sofr3m'||key==='t10y2y'||key==='hhDebt'||key==='bizDebt'"
+  );
+  html = html.replace(
+    "extraLabels={sofr3m:'CME Term SOFR 3M',t10y2y:'10Y − 2Y Spread'}",
+    "extraLabels={sofr3m:'CME Term SOFR 3M',t10y2y:'10Y − 2Y Spread',hhDebt:'Households Debt Growth',bizDebt:'Business Debt Growth'}"
+  );
+  // also if nonfinDebt was already patched in
+  html = html.replace(
+    "||key==='sofr3m'||key==='t10y2y'||key==='nonfinDebt'",
+    "||key==='sofr3m'||key==='t10y2y'||key==='hhDebt'||key==='bizDebt'"
+  );
+  html = html.replace(
+    "nonfinDebt:'Nonfinancial Debt Growth'",
+    "hhDebt:'Households Debt Growth',bizDebt:'Business Debt Growth'"
+  );
+}
+
+// Replace face-B debt block: only HH + Business
+const debtBlock = `<div class=\"metric has-chart\"><div class=\"name\">Households & Nonprofits Debt Growth</div><div class=\"value\">${(()=>{const a=histories['USA-hhDebt']||[];const last=a.at(-1);return last?fmt(last.value):'—' })()}</div><div class=\"date\">Fed Z.1 · CMDEBT YoY · <a href=\"https://www.federalreserve.gov/releases/z1/dataviz/z1/nonfinancial_debt/chart/#units:growth\" target=\"_blank\" rel=\"noopener\" style=\"color:var(--accent)\">Fed ↗</a></div>${historyHTML('USA','hhDebt')}</div><div class=\"metric has-chart\"><div class=\"name\">Nonfinancial Business Debt Growth</div><div class=\"value\">${(()=>{const a=histories['USA-bizDebt']||[];const last=a.at(-1);return last?fmt(last.value):'—' })()}</div><div class=\"date\">Fed Z.1 · TBSDODNS YoY · <a href=\"https://www.federalreserve.gov/releases/z1/dataviz/z1/nonfinancial_debt/chart/#units:growth\" target=\"_blank\" rel=\"noopener\" style=\"color:var(--accent)\">Fed ↗</a></div>${historyHTML('USA','bizDebt')}</div>`;
+
+if (html.includes('Nonfinancial Debt Growth') && !html.includes('Households & Nonprofits Debt Growth')) {
+  // replace the single nonfinDebt metric with the two new ones
+  const re = /<div class=\"metric has-chart\"><div class=\"name\">Nonfinancial Debt Growth[\s\S]*?\$\{historyHTML\('USA','nonfinDebt'\)}<\/div>/;
+  if (re.test(html)) {
+    html = html.replace(re, debtBlock);
+    console.log('replaced nonfinDebt with hh+biz');
+  }
+}
+
+if (!html.includes('Households & Nonprofits Debt Growth')) {
   const marker = "historyHTML('USA','t10y2y')}</div>`;";
-  const insert = "historyHTML('USA','t10y2y')}</div><div class=\"metric has-chart\"><div class=\"name\">Nonfinancial Debt Growth</div><div class=\"value\">${(()=>{const a=histories['USA-nonfinDebt']||[];const last=a.at(-1);return last?fmt(last.value):'—' })()}</div><div class=\"date\">Fed Z.1 · YoY · <a href=\"https://www.federalreserve.gov/releases/z1/dataviz/z1/nonfinancial_debt/chart/#units:growth\" target=\"_blank\" rel=\"noopener\" style=\"color:var(--accent)\">Fed ↗</a></div>${historyHTML('USA','nonfinDebt')}</div>`;";
   if (html.includes(marker)) {
-    html = html.replace(marker, insert);
-    console.log('nonfinDebt metric added');
-  } else console.log('face B marker not found');
+    html = html.replace(marker, "historyHTML('USA','t10y2y')}</div>" + debtBlock + '`;');
+    console.log('hh+biz debt metrics added');
+  } else {
+    console.log('face B marker not found');
+  }
 }
 
 fs.writeFileSync('index.html', html);
-console.log('done', html.length, 'TV', html.includes('bindBigChartHover'), 'debt', html.includes('nonfinDebt'));
+console.log('done', html.length, 'hh', html.includes('hhDebt'), 'biz', html.includes('bizDebt'));
