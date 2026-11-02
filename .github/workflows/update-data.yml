@@ -32,11 +32,10 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Restore index.html if broken + hover tooltips
+      - name: Restore index.html + debt UI
         run: node scripts/restore-index.mjs
       - name: Check updater syntax
         run: |
-          node --check scripts/fetch-sofr-term.mjs
           node --check scripts/fetch-nonfin-debt.mjs
           node --check scripts/restore-index.mjs
       - name: Fetch official economic data
@@ -55,7 +54,7 @@ jobs:
         run: node scripts/fetch-yield-charts.mjs
       - name: CME Term SOFR 3M + T10Y2Y (free)
         run: node scripts/fetch-sofr-term.mjs
-      - name: Nonfinancial debt growth (Fed Z.1)
+      - name: HH + Business debt growth (Fed Z.1)
         run: node scripts/fetch-nonfin-debt.mjs
       - name: Build 3-year policy rate charts
         run: node scripts/fetch-rate-charts.mjs
@@ -76,8 +75,8 @@ jobs:
             echo "No data changes to commit"
           else
             git commit -m "Update MacroWatch data" || true
-            git pull --no-rebase origin main || true
-            if [ -f index.html ]; then git checkout --ours index.html 2>/dev/null || true; git add index.html || true; fi
-            git commit -m "Resolve merge" || true
+            git pull --no-rebase -X ours origin main || true
+            git add data.json scripts/ index.html || true
+            git commit -m "Merge data update" || true
             git push origin HEAD:main || git push --force-with-lease origin HEAD:main
           fi
