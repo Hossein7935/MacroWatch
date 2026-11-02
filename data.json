@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-02T04:19:32.292Z",
+  "updatedAt": "2026-11-02T04:21:50.512Z",
   "data": {
     "CHN": {
       "rate": {
@@ -50,7 +50,7 @@
         "source": "TradingView · TVC:US02Y (United States 2 Year Government Bonds Yield)"
       },
       "y10": {
-        "value": 4.927,
+        "value": 4.925,
         "date": "2026-11-02",
         "source": "TradingView · TVC:US10Y (United States 10 Year Government Bonds Yield)"
       },
@@ -218,7 +218,7 @@
         "source": "IMF DataMapper · PCPIPCH (Inflation rate, average consumer prices)"
       },
       "y2": {
-        "value": 4.947,
+        "value": 4.946,
         "date": "2026-11-02",
         "source": "TradingView · TVC:AU02Y (Australia 2 Year Government Bonds Yield)"
       },
