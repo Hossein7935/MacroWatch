@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-02T04:21:50.512Z",
+  "updatedAt": "2026-11-02T05:14:58.153Z",
   "data": {
     "CHN": {
       "rate": {
@@ -23,7 +23,7 @@
         "source": "TradingView · TVC:CN02Y (China 2 Year Government Bonds Yield)"
       },
       "y10": {
-        "value": 1.633,
+        "value": 1.63,
         "date": "2026-11-02",
         "source": "TradingView · TVC:CN10Y (China 10 Year Government Bonds Yield)"
       },
@@ -45,12 +45,12 @@
         "source": "IMF DataMapper · NGDP_RPCH"
       },
       "y2": {
-        "value": 4.596,
+        "value": 4.6,
         "date": "2026-11-02",
         "source": "TradingView · TVC:US02Y (United States 2 Year Government Bonds Yield)"
       },
       "y10": {
-        "value": 4.925,
+        "value": 4.931,
         "date": "2026-11-02",
         "source": "TradingView · TVC:US10Y (United States 10 Year Government Bonds Yield)"
       },
@@ -80,14 +80,14 @@
         "source": "FRED · T10Y2Y · 10 Jahre"
       },
       "hhDebt": {
-        "value": 3.88,
+        "value": 5.024,
         "date": "2026-04-01",
-        "source": "FRED · CMDEBT YoY · Fed Z.1"
+        "source": "Fed Z.1 · SAAR · Households & Nonprofits"
       },
       "bizDebt": {
-        "value": 5.06,
+        "value": 4.571,
         "date": "2026-04-01",
-        "source": "FRED · TBSDODNS YoY · Fed Z.1"
+        "source": "Fed Z.1 · SAAR · Nonfinancial Business"
       },
       "reservesGdp": {
         "value": 8.99,
@@ -112,7 +112,7 @@
         "source": "IMF DataMapper · NGDP_RPCH"
       },
       "y10": {
-        "value": 2.779,
+        "value": 2.769,
         "date": "2026-11-02",
         "source": "TradingView · TVC:JP10Y (Japan 10 Year LSEG Government Bonds Yield)"
       },
@@ -218,7 +218,7 @@
         "source": "IMF DataMapper · PCPIPCH (Inflation rate, average consumer prices)"
       },
       "y2": {
-        "value": 4.946,
+        "value": 4.951,
         "date": "2026-11-02",
         "source": "TradingView · TVC:AU02Y (Australia 2 Year Government Bonds Yield)"
       },
@@ -3347,485 +3347,485 @@
     "USA-hhDebt": [
       {
         "period": "2011-07-01",
-        "value": -0.75
+        "value": 0.495
       },
       {
         "period": "2011-10-01",
-        "value": -0.79
+        "value": 0.24
       },
       {
         "period": "2012-01-01",
-        "value": -0.96
+        "value": 0.517
       },
       {
         "period": "2012-04-01",
-        "value": -0.84
+        "value": 0.23
       },
       {
         "period": "2012-07-01",
-        "value": -0.73
+        "value": 0.014
       },
       {
         "period": "2012-10-01",
-        "value": -1.8
+        "value": 0.262
       },
       {
         "period": "2013-01-01",
-        "value": -1.62
+        "value": 1.452
       },
       {
         "period": "2013-04-01",
-        "value": -1.31
+        "value": 0.997
       },
       {
         "period": "2013-07-01",
-        "value": -0.91
+        "value": 1.163
       },
       {
         "period": "2013-10-01",
-        "value": 1.47
+        "value": 4.86
       },
       {
         "period": "2014-01-01",
-        "value": 1.79
+        "value": 2.365
       },
       {
         "period": "2014-04-01",
-        "value": 1.97
+        "value": 1.317
       },
       {
         "period": "2014-07-01",
-        "value": 1.37
+        "value": 1.501
       },
       {
         "period": "2014-10-01",
-        "value": 0.67
+        "value": 1.944
       },
       {
         "period": "2015-01-01",
-        "value": 0.55
+        "value": 2.204
       },
       {
         "period": "2015-04-01",
-        "value": 1.09
+        "value": 3.434
       },
       {
         "period": "2015-07-01",
-        "value": 2.17
+        "value": 2.69
       },
       {
         "period": "2015-10-01",
-        "value": 1.7
+        "value": 2.578
       },
       {
         "period": "2016-01-01",
-        "value": 2.08
+        "value": 3.231
       },
       {
         "period": "2016-04-01",
-        "value": 2.05
+        "value": 3.192
       },
       {
         "period": "2016-07-01",
-        "value": 2.25
+        "value": 3.416
       },
       {
         "period": "2016-10-01",
-        "value": 2.97
+        "value": 2.769
       },
       {
         "period": "2017-01-01",
-        "value": 3.12
+        "value": 3.747
       },
       {
         "period": "2017-04-01",
-        "value": 3.25
+        "value": 3.69
       },
       {
         "period": "2017-07-01",
-        "value": 3.16
+        "value": 3.018
       },
       {
         "period": "2017-10-01",
-        "value": 3.5
+        "value": 4.066
       },
       {
         "period": "2018-01-01",
-        "value": 3.42
+        "value": 3.349
       },
       {
         "period": "2018-04-01",
-        "value": 3.3
+        "value": 3.239
       },
       {
         "period": "2018-07-01",
-        "value": 3.39
+        "value": 3.155
       },
       {
         "period": "2018-10-01",
-        "value": 3.22
+        "value": 3.392
       },
       {
         "period": "2019-01-01",
-        "value": 3.1
+        "value": 2.59
       },
       {
         "period": "2019-04-01",
-        "value": 3.44
+        "value": 4.081
       },
       {
         "period": "2019-07-01",
-        "value": 3.62
+        "value": 3.71
       },
       {
         "period": "2019-10-01",
-        "value": 3.74
+        "value": 3.484
       },
       {
         "period": "2020-01-01",
-        "value": 3.64
+        "value": 3.256
       },
       {
         "period": "2020-04-01",
-        "value": 2.47
+        "value": 0.196
       },
       {
         "period": "2020-07-01",
-        "value": 2.64
+        "value": 4.664
       },
       {
         "period": "2020-10-01",
-        "value": 2.82
+        "value": 4.455
       },
       {
         "period": "2021-01-01",
-        "value": 3.49
+        "value": 5.028
       },
       {
         "period": "2021-04-01",
-        "value": 7.78
+        "value": 7.4
       },
       {
         "period": "2021-07-01",
-        "value": 8.42
+        "value": 7.042
       },
       {
         "period": "2021-10-01",
-        "value": 9.3
+        "value": 7.729
       },
       {
         "period": "2022-01-01",
-        "value": 10.26
+        "value": 8.582
       },
       {
         "period": "2022-04-01",
-        "value": 8.2
+        "value": 8.588
       },
       {
         "period": "2022-07-01",
-        "value": 8.11
+        "value": 6.676
       },
       {
         "period": "2022-10-01",
-        "value": 7.41
+        "value": 4.648
       },
       {
         "period": "2023-01-01",
-        "value": 5.8
+        "value": 2.442
       },
       {
         "period": "2023-04-01",
-        "value": 4.35
+        "value": 2.996
       },
       {
         "period": "2023-07-01",
-        "value": 3.45
+        "value": 3.188
       },
       {
         "period": "2023-10-01",
-        "value": 2.78
+        "value": 2.479
       },
       {
         "period": "2024-01-01",
-        "value": 2.81
+        "value": 2.524
       },
       {
         "period": "2024-04-01",
-        "value": 2.7
+        "value": 2.598
       },
       {
         "period": "2024-07-01",
-        "value": 2.67
+        "value": 3.063
       },
       {
         "period": "2024-10-01",
-        "value": 2.52
+        "value": 2.995
       },
       {
         "period": "2025-01-01",
-        "value": 2.67
+        "value": 2.379
       },
       {
         "period": "2025-04-01",
-        "value": 2.96
+        "value": 4.041
       },
       {
         "period": "2025-07-01",
-        "value": 3.14
+        "value": 3.773
       },
       {
         "period": "2025-10-01",
-        "value": 3.46
+        "value": 3.1
       },
       {
         "period": "2026-01-01",
-        "value": 3.55
+        "value": 3.502
       },
       {
         "period": "2026-04-01",
-        "value": 3.88
+        "value": 5.024
       }
     ],
     "USA-bizDebt": [
       {
         "period": "2011-07-01",
-        "value": 0.94
+        "value": 3.127
       },
       {
         "period": "2011-10-01",
-        "value": 2.64
+        "value": 3.807
       },
       {
         "period": "2012-01-01",
-        "value": 3.39
+        "value": 3.589
       },
       {
         "period": "2012-04-01",
-        "value": 3.64
+        "value": 4.343
       },
       {
         "period": "2012-07-01",
-        "value": 4.53
+        "value": 6.587
       },
       {
         "period": "2012-10-01",
-        "value": 6.12
+        "value": 8.353
       },
       {
         "period": "2013-01-01",
-        "value": 6.1
+        "value": 3.269
       },
       {
         "period": "2013-04-01",
-        "value": 6.54
+        "value": 6
       },
       {
         "period": "2013-07-01",
-        "value": 6.67
+        "value": 7.058
       },
       {
         "period": "2013-10-01",
-        "value": 5.3
+        "value": 5.019
       },
       {
         "period": "2014-01-01",
-        "value": 6.14
+        "value": 6.495
       },
       {
         "period": "2014-04-01",
-        "value": 6.19
+        "value": 6.171
       },
       {
         "period": "2014-07-01",
-        "value": 6.07
+        "value": 6.559
       },
       {
         "period": "2014-10-01",
-        "value": 6.98
+        "value": 8.082
       },
       {
         "period": "2015-01-01",
-        "value": 7.21
+        "value": 7.792
       },
       {
         "period": "2015-04-01",
-        "value": 7.91
+        "value": 8.816
       },
       {
         "period": "2015-07-01",
-        "value": 7.75
+        "value": 5.954
       },
       {
         "period": "2015-10-01",
-        "value": 6.94
+        "value": 5.737
       },
       {
         "period": "2016-01-01",
-        "value": 7.25
+        "value": 8.536
       },
       {
         "period": "2016-04-01",
-        "value": 6.09
+        "value": 4.382
       },
       {
         "period": "2016-07-01",
-        "value": 5.91
+        "value": 5.26
       },
       {
         "period": "2016-10-01",
-        "value": 5.04
+        "value": 1.838
       },
       {
         "period": "2017-01-01",
-        "value": 4.93
+        "value": 6.29
       },
       {
         "period": "2017-04-01",
-        "value": 5.68
+        "value": 7.244
       },
       {
         "period": "2017-07-01",
-        "value": 5.83
+        "value": 5.84
       },
       {
         "period": "2017-10-01",
-        "value": 7.41
+        "value": 5.77
       },
       {
         "period": "2018-01-01",
-        "value": 6.52
+        "value": 4.73
       },
       {
         "period": "2018-04-01",
-        "value": 7.76
+        "value": 3.557
       },
       {
         "period": "2018-07-01",
-        "value": 7.55
+        "value": 5.044
       },
       {
         "period": "2018-10-01",
-        "value": 6.84
+        "value": 5.012
       },
       {
         "period": "2019-01-01",
-        "value": 7.24
+        "value": 6.591
       },
       {
         "period": "2019-04-01",
-        "value": 5.14
+        "value": 4.215
       },
       {
         "period": "2019-07-01",
-        "value": 5.31
+        "value": 6.005
       },
       {
         "period": "2019-10-01",
-        "value": 4.6
+        "value": 2.574
       },
       {
         "period": "2020-01-01",
-        "value": 8.16
+        "value": 20.029
       },
       {
         "period": "2020-04-01",
-        "value": 11.18
+        "value": 15.194
       },
       {
         "period": "2020-07-01",
-        "value": 9.75
+        "value": 0.487
       },
       {
         "period": "2020-10-01",
-        "value": 9.56
+        "value": 1.608
       },
       {
         "period": "2021-01-01",
-        "value": 5.68
+        "value": 5.133
       },
       {
         "period": "2021-04-01",
-        "value": 3.63
+        "value": 3.005
       },
       {
         "period": "2021-07-01",
-        "value": 4.88
+        "value": 5.444
       },
       {
         "period": "2021-10-01",
-        "value": 6.84
+        "value": 8.373
       },
       {
         "period": "2022-01-01",
-        "value": 7.56
+        "value": 7.876
       },
       {
         "period": "2022-04-01",
-        "value": 7.69
+        "value": 7.317
       },
       {
         "period": "2022-07-01",
-        "value": 7.41
+        "value": 4.274
       },
       {
         "period": "2022-10-01",
-        "value": 5.61
+        "value": 3.672
       },
       {
         "period": "2023-01-01",
-        "value": 4.68
+        "value": 4.321
       },
       {
         "period": "2023-04-01",
-        "value": 3.15
+        "value": 2.069
       },
       {
         "period": "2023-07-01",
-        "value": 2.47
+        "value": 1.755
       },
       {
         "period": "2023-10-01",
-        "value": 2.18
+        "value": 1.364
       },
       {
         "period": "2024-01-01",
-        "value": 2.19
+        "value": 4.341
       },
       {
         "period": "2024-04-01",
-        "value": 2.95
+        "value": 4.701
       },
       {
         "period": "2024-07-01",
-        "value": 3.57
+        "value": 4.019
       },
       {
         "period": "2024-10-01",
-        "value": 3.22
+        "value": 1.904
       },
       {
         "period": "2025-01-01",
-        "value": 3.11
+        "value": 5.535
       },
       {
         "period": "2025-04-01",
-        "value": 3.03
+        "value": 4.858
       },
       {
         "period": "2025-07-01",
-        "value": 3.15
+        "value": 4.515
       },
       {
         "period": "2025-10-01",
-        "value": 4.2
+        "value": 3.015
       },
       {
         "period": "2026-01-01",
-        "value": 5.01
+        "value": 7.033
       },
       {
         "period": "2026-04-01",
-        "value": 5.06
+        "value": 4.571
       }
     ],
     "USA-rate": [
@@ -4728,6 +4728,32 @@
         "value": 4.6
       }
     ],
+    "CHN-gdp": [
+      {
+        "period": "2020",
+        "value": 2.34
+      },
+      {
+        "period": "2021",
+        "value": 8.57
+      },
+      {
+        "period": "2022",
+        "value": 3.13
+      },
+      {
+        "period": "2023",
+        "value": 5.42
+      },
+      {
+        "period": "2024",
+        "value": 4.96
+      },
+      {
+        "period": "2025",
+        "value": 4.96
+      }
+    ],
     "USA-reservesGdp": [
       {
         "period": "2023-10",
@@ -5132,7 +5158,6 @@
   },
   "errors": [
     "BIP-Quartale CHN: keine geprüfte aktuelle Quartalsreihe gefunden; Wert bleibt leer",
-    "Inflation-Chart JPN: keine YoY-Punkte",
-    "BIP-Chart WorldBank: The operation was aborted due to timeout"
+    "Inflation-Chart JPN: keine YoY-Punkte"
   ]
 }
